@@ -36,16 +36,11 @@ const schema = yup
       .trim()
       .min(2, "Must be at least 2 characters long")
       .required(),
-    country: yup.string().required("Please choose a country"),
     email: yup
       .string()
       .matches(/\S+@\S+\.\S+/, "Must be a valid email address")
       .required(),
-    land: yup.string().required("Please choose a land code"),
-    phone: yup
-      .string()
-      .matches(/^[0-9]+$/, "Must not contain any spaces, letters, or symbols")
-      .required(),
+    
     cardName: yup
       .string()
       .trim()
@@ -149,35 +144,7 @@ export default function CheckoutForm() {
           </div>
         </div>
 
-        <label htmlFor="country">Country</label>
-        <select
-          {...register("country", {
-            required: true,
-          })}
-        >
-          <option value="">--Please choose an option--</option>
-          <option>Argentina</option>
-          <option>Bolivia</option>
-          <option>Chile</option>
-          <option>Colombia</option>
-          <option>Costa Rica</option>
-          <option>Cuba</option>
-          <option>Ecuador</option>
-          <option>El Salvador</option>
-          <option>España</option>
-          <option>Guatemala</option>
-          <option>Honduras</option>
-          <option>México</option>
-          <option>Nicaragua</option>
-          <option>Panamá</option>
-          <option>Paraguay</option>
-          <option>Perú</option>
-          <option>Puerto Rico</option>
-          <option>República Dominicana</option>
-          <option>Uruguay</option>
-          <option>Venezuela</option>
-        </select>
-        <p className="error-message">{errors.country?.message}</p>
+       
 
         <label htmlFor="email">Email</label>
         <input
@@ -190,52 +157,7 @@ export default function CheckoutForm() {
         ></input>
         <p className="error-message">{errors.email?.message}</p>
 
-        <div className="small-field">
-          <div>
-            <label htmlFor="land">Land code</label>
-            <select
-              {...register("land", {
-                required: true,
-              })}
-            >
-              <option value="">--Please choose an option--</option>
-              <option>+54 (Argentina)</option>
-              <option>+591 (Bolivia)</option>
-              <option>+56(Chile)</option>
-              <option>+57 (Colombia)</option>
-              <option>+506 (Costa Rica)</option>
-              <option>+53 (Cuba)</option>
-              <option>+593 (Ecuador)</option>
-              <option>+503 (El Salvador)</option>
-              <option>+34 (España)</option>
-              <option>+502 (Guatemala)</option>
-              <option>+504 (Honduras)</option>
-              <option>+52 (México)</option>
-              <option>+505 (Nicaragua)</option>
-              <option>+507 (Panamá)</option>
-              <option>+595 (Paraguay)</option>
-              <option>+51 (Perú)</option>
-              <option>+1 939 (Puerto Rico)</option>
-              <option>+1 809 (República Dominicana)</option>
-              <option>+598 (Uruguay)</option>
-              <option>+58 (Venezuela)</option>
-            </select>
-            <p className="error-message">{errors.land?.message}</p>
-          </div>
-
-          <div>
-            <label htmlFor="phone">Phone number</label>
-            <input
-              {...register("phone", {
-                required: true,
-              })}
-              type="tel"
-              name="phone"
-              placeholder="Phone number"
-            ></input>
-            <p className="error-message">{errors.phone?.message}</p>
-          </div>
-        </div>
+       
       </fieldset>
 
       <fieldset className="payment">

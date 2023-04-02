@@ -12,6 +12,7 @@ export const StyledContactForm = styled.form`
 
   input,
   textarea {
+    padding: 1rem;
     display: block;
     width: 100%;
     margin-top: 0.5rem;
@@ -20,6 +21,7 @@ export const StyledContactForm = styled.form`
   }
 
   input {
+    padding: 1rem;
     height: 2rem;
   }
 
@@ -37,7 +39,7 @@ export const StyledContactForm = styled.form`
     width: 100%;
 
     button {
-      width: 100%;
+      width: 50%;
     }
   }
 `;

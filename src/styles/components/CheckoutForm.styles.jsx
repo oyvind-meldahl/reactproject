@@ -15,6 +15,7 @@ export const StyledCheckoutForm = styled.form`
   select {
     display: block;
     width: 100%;
+    padding: 1rem;
     margin-top: 0.5rem;
     border: ${({ theme }) =>
       `${theme.border.thickness} ${theme.border.type} ${theme.color.support}`};
