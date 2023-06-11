@@ -1,6 +1,6 @@
 # E-Commerce Site
 
-![e-com](https://github.com/Melisa-Zorraindo/noroff-react-project/assets/76968122/5ccd3d9e-e948-4486-876e-c52610e62035)
+![e-com](https://github.com/oyvind-meldahl/reactproject/blob/main/banner.png)
 
 ## Description
 
